@@ -28,10 +28,15 @@ widgets:      [mathjax, bootstrap]
 
 *** =left
 
+### Computing
+
 * [Course Introduction](01-introduction.html)
 
 *** =right
 
+### Blown to Bits
+
+* [Ch 1. Digital Explosion](02-bitsbook-01.html)
 
 
 
