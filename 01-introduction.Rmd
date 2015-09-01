@@ -8,20 +8,30 @@ date:         September 31, 2015
 #biglogo:      uw-logo-large.png
 job:          Professor
 highlighter:  highlight.js
-hitheme:      tomorrow
-mode:         selfcontained
-framework:    io2012
-widgets:      [mathjax, bootstrap]
+hitheme:      tomorrow             # default
+mode:         selfcontained        # {standalone, draft}
+framework:    io2012               # {io2012, html5slides, shower, dzslides, revealjs, ...}
+revealjs:     
+    theme: blood
+    transition: rotate
+    center: "false"
+widgets:      [mathjax, bootstrap] # {mathjax, quiz, bootstrap}
 
 ---
 
 <style>
-.title-slide {
+slide.title-slide {
      background-color: #EDE0CF; /* CBE7A5; #EDE0CF; ; #CA9F9D*/
      background-image: url(assets/img/uw-logo-large.png);
      background-repeat: no-repeat;
      background-position: center top;
    }
+slide:not(.title-slide) {
+    background-image: url(assets/img/uw-logo-small.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 24px;
+}
 </style>
 
 # Welcome
@@ -63,7 +73,7 @@ widgets:      [mathjax, bootstrap]
 
 > * Christopher Nickell
 
----&twocol
+--- &twocol
 
 ## Who You Are
 
@@ -81,7 +91,7 @@ Please, please upload a photo to WyoCourses!
     <img src="assets/img/wyocourses-detail.png" title="WyoCourses Student Detail" alt="WyoCourses Student Detail">
 </div>
 
----&twocol
+--- &twocol
 
 ## Who You Are
 
@@ -132,7 +142,7 @@ http://www.bitsbook.com
 
 ## Grades
 
-Component                | %Weight   | Min%
+Component                |    %Weight|           Min%
 -------------------------|-----------|---------------
 Class Participation      | 20%       |            50%
 Programming Assignments  | 15%       |            50%
@@ -186,6 +196,13 @@ Items marked with (*) are taken care of by your FIG RA's planned activities
 * This will familiarize you with the resources available at the library
 
 * This is essential for any research papers you will write while at UW (starting with this course)
+
+* You can find the TIP Module in the **Modules** tab inside WyoCourses
+
+<div class="centered">
+    <img src="assets/img/wyocourses-modules.png" title="WyoCourses Modules" alt="WyoCourses Modules">
+</div>
+
 
 ---
 
