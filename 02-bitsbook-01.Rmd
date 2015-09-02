@@ -30,6 +30,39 @@ slide:not(.title-slide) {
 }
 </style>
 
+# Staying on Course
+
+
+---
+
+## The Trapdoor
+
+<br>
+
+<div class="centered">
+    <img src="assets/img/trapdoor.jpg" title="Trapdoor" alt="Trapdoor">
+</div>
+
+<br>
+
+https://euonymous.wordpress.com/tag/ideo/
+
+---
+
+## Project Motivation
+
+<br>
+
+<div class="centered">
+    <img src="assets/img/motivationcurve02.jpg" title="Motivation" alt="Motivation" width="80%">
+</div>
+
+<br>
+
+http://massivevoodoo.blogspot.com/2014/07/inspiration-paintingproject-motivation.html
+
+---
+
 # Technical Summary
 
 ---
