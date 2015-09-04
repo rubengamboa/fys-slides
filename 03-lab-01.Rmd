@@ -62,9 +62,11 @@ slide:not(.title-slide) {
 
 * You can import images using *File > Import...*
 
-* Edit the image by right-clicking on the image under the *Costumes* tab in the center region
+* Duplicate the image, so you have one that points left and one that points right
 
-* Use the *flip &lt;->* button so you have an image that points left and one that points right
+* Edit one the images by right-clicking on the image under the *Costumes* tab in the center region
+
+* Use the *flip &lt;->* button so that it points in the opposite direction
 
 * Now write a program that changes the costume when the user clicks on the sprite
   * Control > When I am clicked
