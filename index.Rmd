@@ -31,6 +31,7 @@ widgets:      [mathjax, bootstrap]
 ### Computing
 
 * [Course Introduction](01-introduction.html)
+* [Lab 1](03-lab-01.html)
 
 *** =right
 

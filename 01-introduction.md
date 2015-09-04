@@ -3,7 +3,7 @@
 title:        COSC 1101 The Beauty & Joy of Computing
 subtitle:     Course Introduction
 author:       Ruben Gamboa
-date:         September 31, 2015
+date:         August 31, 2015
 #logo:         uw-logo-large.png
 #biglogo:      uw-logo-large.png
 job:          Professor
