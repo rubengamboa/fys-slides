@@ -38,6 +38,7 @@ widgets:      [mathjax, bootstrap]
 ### Blown to Bits
 
 * [Ch 1. Digital Explosion](02-bitsbook-01.html)
+* [Ch 1. Digital Explosion (Continued)](04-grit.html)
 
 
 
