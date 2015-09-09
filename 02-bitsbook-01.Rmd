@@ -3,7 +3,7 @@
 title:        COSC 1101 The Beauty & Joy of Computing
 subtitle:     Blown to Bits. Digital Explosion
 author:       Ruben Gamboa
-date:         October 2, 2015
+date:         September 2, 2015
 #logo:         uw-logo-large.png
 #biglogo:      uw-logo-large.png
 job:          Professor
