@@ -32,6 +32,7 @@ widgets:      [mathjax, bootstrap]
 
 * [Course Introduction](01-introduction.html)
 * [Lab 1](03-lab-01.html)
+* [Lab 2](05-lab-02.html)
 
 *** =right
 
