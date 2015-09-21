@@ -102,6 +102,21 @@ http://www.hercampus.com/school/u-mass-amherst/gif-story-10-reasons-being-sick-c
 
 ---
 
+## A New Privacy
+
+* Can we control what others know? (Warren-Brandeis Privacy)
+
+* Can we control what they do with that knowledge? (Westin Privacy)
+
+* Best practices?
+  * Openness
+  * Disclosure
+  * Secondary use
+  * Correction
+  * Security
+
+---
+
 ## Connecting Dots
 
 * With all this data, why can't we predict crime?
