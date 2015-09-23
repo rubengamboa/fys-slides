@@ -42,6 +42,8 @@ widgets:      [mathjax, bootstrap]
 * [Ch 1. Digital Explosion](02-bitsbook-01.html)
 * [Ch 1. Digital Explosion (Continued)](04-grit.html)
 * [Ch 2. Naked in the Sunlight](06-bitsbook-02.html)
+* [Ch 2. Naked in the Sunlight (Continued)](08-bitsbook-02.html)
+* [Ch 2. Naked in the Sunlight (Continued)](09-bitsbook-02.html)
 
 
 
