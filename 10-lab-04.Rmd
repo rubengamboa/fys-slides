@@ -1,0 +1,82 @@
+---
+
+title:        COSC 1101 The Beauty & Joy of Computing
+subtitle:     Lab 4. Build Your Own Blocks
+author:       Ruben Gamboa
+date:         September 25, 2015
+#logo:         uw-logo-large.png
+#biglogo:      uw-logo-large.png
+job:          Professor
+highlighter:  highlight.js
+hitheme:      tomorrow             # default
+mode:         selfcontained        # {standalone, draft}
+framework:    io2012               # {io2012, html5slides, shower, dzslides, revealjs, ...}
+revealjs:     
+    theme: blood
+    transition: rotate
+    center: "false"
+widgets:      [mathjax, bootstrap] # {mathjax, quiz, bootstrap}
+
+---
+
+<style>
+slide.title-slide {
+     background-color: #EDE0CF; /* CBE7A5; #EDE0CF; ; #CA9F9D*/
+     background-image: url(assets/img/uw-logo-large.png);
+     background-repeat: no-repeat;
+     background-position: center top;
+   }
+slide:not(.title-slide) {
+    background-image: url(assets/img/uw-logo-small.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 24px;
+}
+</style>
+
+## Making Your Own Blocks
+
+* In the *Variables* section, there is a button that lets you build your own block
+
+* You can place the block into any of the categories, e.g., Motion, Control, ...
+
+* You can also create three types of blocks
+  * Command - does something
+  * Reporter - returns some value
+  * Predicate - returns *true* or *false*
+
+* After you give the block a name (which should be a phrase), you can change some words into input fields
+
+---
+
+## Part 1
+
+* Build three blocks!
+
+* **Polygon** with N sides of length L
+  Note: Think carefully -- should this command move around a polygon, or should it draw a polygon?
+
+* **Area** of circle with radius R
+
+* Is N **prime**?
+  * Note: N is prime if N >= 2, N mod 2 = 0, N mod 3 = 0, ..., and N mod (N-1) = 0
+
+---
+
+## Part 2
+
+* Consider your solutions to Lab 3
+
+* There are many opportunities to build your own blocks, to make your program easier to understand
+
+* E.g., Each separate random walk of the Solar Photons can be its own block, and another block of code can keep track of the
+  averages
+
+* E.g., the computation for the profit of a call option can be its own block
+
+* And so on....
+
+* Give some serious thought to the way your program can be broken down into blocks, and recode your solution to labs 3
+
+* Note: You do not have to start from scratch!  Take your existing solutions and move some blocks around.  
+  But move the blocks purposefully!
