@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>COSC 1101 The Beauty &amp; Joy of Computing</title>
+  <meta charset="utf-8">
+  <meta name="description" content="COSC 1101 The Beauty &amp; Joy of Computing">
+  <meta name="author" content="Ruben Gamboa">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>COSC 1101 The Beauty &amp; Joy of Computing</h1>
+    <h2>Project Information</h2>
+    <p>Ruben Gamboa<br/>Professor</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    <style>
+slide.title-slide {
+     background-color: #EDE0CF; /* CBE7A5; #EDE0CF; ; #CA9F9D*/
+     background-image: url(assets/img/uw-logo-large.png);
+     background-repeat: no-repeat;
+     background-position: center top;
+   }
+slide:not(.title-slide) {
+    background-image: url(assets/img/uw-logo-small.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 24px;
+}
+</style>
+
+<h1>Staying on Course</h1>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Difference between High School and College</h2>
+  </hgroup>
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th>High School</th>
+<th>College</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Mandatory &amp; Free</td>
+<td>Voluntary &amp; Expensive</td>
+</tr>
+<tr>
+<td>Fully structured time</td>
+<td>Largely unstructured</td>
+</tr>
+<tr>
+<td>Need permission to participate in extracurriculars</td>
+<td>Up to you!</td>
+</tr>
+<tr>
+<td>Parents and teachers give friendly reminders</td>
+<td>Up to you!</td>
+</tr>
+<tr>
+<td>35 hours per week in class</td>
+<td>12-15 hours per week in class</td>
+</tr>
+<tr>
+<td>Classes chosen by counselors</td>
+<td>Up to you!</td>
+</tr>
+<tr>
+<td>Teachers/counselors keep track of your progress</td>
+<td>Up to you!</td>
+</tr>
+<tr>
+<td>Told what to do and corrected if necessary</td>
+<td>Take responsibility and suffer consequences</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Difference between High School and College</h2>
+  </hgroup>
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th>AP Course</th>
+<th>College Course</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>170 hours</td>
+<td>40 hours</td>
+</tr>
+<tr>
+<td>Study 0-2 hours a week outside of class</td>
+<td>Study 6-9 hours / week per class</td>
+</tr>
+<tr>
+<td>Casual listening is enough</td>
+<td>Need to interact deeply with material</td>
+</tr>
+<tr>
+<td>Material is largely learned in class</td>
+<td>Material is largely learned outside of class</td>
+</tr>
+<tr>
+<td>Reading materials are repeated in class</td>
+<td>It is assumed that you&#39;ve read and understood readings</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Difference between High School and College</h2>
+  </hgroup>
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th>High School</th>
+<th>College</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Teachers grade everything</td>
+<td>Professors grade some things and may assign &quot;optional&quot; homework</td>
+</tr>
+<tr>
+<td>Teachers remind you of incomplete work</td>
+<td>Professors may not know if you&#39;ve completed your work</td>
+</tr>
+<tr>
+<td>Teachers seek you ouf if they think you&#39;re in trouble</td>
+<td>Professors expect you to seek them out</td>
+</tr>
+<tr>
+<td>Teachers carefully take attendance</td>
+<td>Professors rarely take attendance (but know if you&#39;re frequently absent)</td>
+</tr>
+<tr>
+<td>Teachers take responsibility for your success</td>
+<td>Professors wish you well</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Difference between High School and College</h2>
+  </hgroup>
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th>High School</th>
+<th>College</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Lots of tests over small amounts of material</td>
+<td>2-3 big tests</td>
+</tr>
+<tr>
+<td>Makeup tests available</td>
+<td>Hardly ever</td>
+</tr>
+<tr>
+<td>Tests scheduled to avoid school events</td>
+<td>Tests scheduled by ebb and flow of class</td>
+</tr>
+<tr>
+<td>Review sessions, sample tests, etc.</td>
+<td>Maybe Q/A sessions</td>
+</tr>
+<tr>
+<td>Lots of opportunities to turn things around</td>
+<td>Hard to recover from serious mistakes</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h1>Lab 4</h1>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Testing whether N is Prime</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Elementary school algorithm
+
+<ul>
+<li>Check to see if 2 divides N -- if it does, N is not a prime</li>
+<li>Check to see if 3 divides N -- if it does, N is not a prime</li>
+<li class='..</li>'><li>Check to see if N-1 divides N -- if it does, N is not a prime</li>
+<li>N must be a prime!</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Testing whether N is Prime</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li><p>Translating school algorithm to <em>Snap!</em></p>
+
+<pre><code>   if 2 divides N
+       report FALSE
+   if 3 divides N
+       report FALSE
+   ...
+   if N-1 divides N
+       report FALSE
+   report TRUE
+</code></pre></li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ul class = "build incremental">
+<li><p>Translating &quot;X divides N&quot;</p>
+
+<ul>
+<li>Use mod block to get remainder, as in &quot;X mod N = 0&quot;</li>
+</ul></li>
+<li><p>Using a loop</p>
+
+<ul>
+<li>We don&#39;t want to have a lot of similar statements</li>
+<li>We can&#39;t do it, unless we know N ahead of time</li>
+<li>Use a &quot;repeat until&quot; loop, with a variable K that starts at 2 and goes up to N-1</li>
+</ul></li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Writing Snap! in English (e.g., for Exam)</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <div class="centered">
+    <img src="assets/img/snap-program.png" width="288" title="Snap Program" alt="Snap Program">
+</div>
+
+</div>
+<div style='float:right;width:48%;'>
+  <pre><code>    when green flag is clicked
+        pen up
+        clear
+        go to x: 0 y: 0
+        point in direction 90
+        pen down
+        for i=1 to 200
+            move i steps
+            turn right 121 degrees
+</code></pre>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Writing Snap! in English (e.g., for Exam)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p style="font-size: 200%; color: red">Don't Panic!</p>
+
+<ul class = "build incremental">
+<li><p>All of these are considered the same</p>
+
+<ul>
+<li>move 100 steps</li>
+<li>move 100</li>
+<li>walk 100</li>
+<li>run 100</li>
+<li>fly 100</li>
+<li>scooch over by 100</li>
+</ul></li>
+<li><p>I want to know that you can almost remember the right blocks to use</p></li>
+<li><p>I need to understand what blocks go inside what other blocks (for repeat, if, etc.)</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h1>The Project</h1>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Mechanics</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Brush up on your grammar, style, spelling, etc.</p></li>
+<li><p>These things are important for this class -- and more important, for your life</p></li>
+<li><p>Bottom line: Do not butcher the Queen&#39;s language!</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Current Status</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>You should have already finished TIP (and many of you have)</p></li>
+<li><p>Maybe you should have an idea</p></li>
+<li><p>Now it&#39;s time to go out and get started in the project</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Choosing a Topic</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Anything you&#39;re interested in</p></li>
+<li><p>There should be a connection to computing (but that&#39;s usually easy)</p></li>
+<li><p>Now you have to learn how computing is used or may affect your topic of interest</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Example Topic</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>I&#39;m interested in <strong>astronomy</strong></p></li>
+<li><p>I&#39;ve heard about <strong>survey projects</strong> that generate a lot of data</p></li>
+<li><p>Computers have to come into that somehow</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Writing Process</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Collect</li>
+<li>Plan</li>
+<li>Develop</li>
+</ol>
+
+<p>You&#39;ve seen variations of that in school, but they&#39;re usually focused on the <strong>paper</strong>.
+I want you focused on the <strong>ideas</strong>.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Collect</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Find materials that will make it into the writing
+
+<ul>
+<li>read</li>
+<li>research</li>
+<li>take notes</li>
+<li>think</li>
+<li>make mental connections</li>
+<li>maps or webs</li>
+<li>list-making</li>
+<li>freewriting</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Collect: Example</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>I need to find some astronomy surveys</p>
+
+<ul>
+<li>Sloan Digital Sky Survey (SDSS)</li>
+<li>Large Synoptic Survey Telescope (LSST)</li>
+</ul></li>
+<li><p>What can they do?</p></li>
+<li><p>How much data do they generate?</p></li>
+<li><p>What do people do with that data?</p></li>
+</ul>
+
+<ul class = "build incremental">
+<li><p><strong>Problem:</strong> too much data for people to handle and analyze in real time!</p></li>
+<li><p><strong>Solution:</strong> software pipelines that automatically process the data</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>Collect: Sources</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Very important!</p></li>
+<li><p>We need to keep track of <strong>where</strong> we&#39;re learning things from</p></li>
+<li><p>This will become the bibliography</p>
+
+<ul>
+<li>It should be varied</li>
+<li>Include at least one trip to the library for a journal-quality article</li>
+<li>Can also include books, magazines, websites, etc.</li>
+</ul></li>
+<li><p>Project background information (with references) is <strong>due October 16</strong></p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>Plan</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>All planning activities
+
+<ul>
+<li>map</li>
+<li>list</li>
+<li>rehearse</li>
+<li>outline</li>
+<li>polish that topic</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Plan: Example</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>We&#39;re looking at the software pipeline for an astronomical survey</p></li>
+<li><p>What needs to happen?</p></li>
+<li><p>What does the data look like coming in?</p></li>
+<li><p>What do the products look like coming out?</p></li>
+<li><p>What tough problems are involved?</p></li>
+</ul>
+
+<ul class = "build incremental">
+<li><p><strong>Problem:</strong> How do we know what we&#39;re looking at?</p></li>
+<li><p><strong>Solution:</strong> Use machine learning to tell stars and (very distant) galaxies apart!</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>Develop</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>Choice 1: Actual writing
+
+<ul>
+<li>draft</li>
+<li>revise</li>
+<li>proof read</li>
+<li>edit</li>
+</ul></li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ul class = "build incremental">
+<li>Choice 2: Program
+
+<ul>
+<li>identify key abstractions</li>
+<li>pick data</li>
+<li>decide how data should be processed</li>
+<li>test</li>
+<li>fix</li>
+<li>test some more</li>
+<li>fix some more</li>
+<li class=''>. . .</li>
+</ul></li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>Develop: Example Paper</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Thesis: How can computers learn to distinguish stars from galaxies that take up only 1 pixel?</p></li>
+<li><p>What background do we need to explain?</p></li>
+<li><p>Organize the background material</p></li>
+<li><p>Write first draft</p></li>
+<li><p>Wait a couple of days</p></li>
+<li><p>Read first draft, panic</p></li>
+<li><p>Wait a couple of days</p></li>
+<li><p>Write second draft</p></li>
+<li><p>Read second draft, better</p></li>
+<li><p>Repeat as needed</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>Develop: Example Software</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Goal: Distinguish stars from galaxies that take up only 1 pixel?</p></li>
+<li><p>What is this &quot;machine learning&quot; thing, anyway?</p></li>
+<li><p>How do they do it?</p>
+
+<ul>
+<li>Different shape of SED (Spectral Energy Distribution)</li>
+</ul></li>
+<li><p>What data do we need?</p>
+
+<ul>
+<li>Entire SED gives us the &quot;ground truth&quot;</li>
+<li>Intensity at different colors can be used for learning</li>
+</ul></li>
+<li><p>What processing can we use?</p>
+
+<ul>
+<li>Machine learning looks way too fancy</li>
+<li>Maybe we can just look for one value that distinguishes stars from galaxies</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>Develop: Example Software</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Write a program that goes through a list of objects</p>
+
+<ul>
+<li>Each object has intensity at colors U and B</li>
+<li>Each object says whether it&#39;s a star or galaxy (from complete SED)</li>
+</ul></li>
+<li><p>Compute U-B for each object</p></li>
+<li><p>Find a cut-off X such that object is a star if U-B &gt; X</p></li>
+<li><p>Then go through another list of object to predict (using X) if they&#39;re stars or galaxies</p>
+
+<ul>
+<li>Use &quot;ground truth&quot; (from complete SED) to see how many we get right</li>
+<li>Pray that it&#39;s better than 50-50</li>
+</ul></li>
+<li><p>Bottom line: You showed you learned a lot of the background, and you wrote a program that used some of it</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-26" style="background:;">
+  <hgroup>
+    <h1>Wrapping Up Chapter 2</h1>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-27" style="background:;">
+  <hgroup>
+    <h2>Software Is Eating Our Lunch</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>What is the thesis of the article?</p></li>
+<li><p>What is <em>Creative Disruption</em>?</p></li>
+<li><p>How well did the predictions of the article hold up?</p></li>
+<li><p>What new tech giants are coming?</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='NA'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Difference between High School and College'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Difference between High School and College'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Difference between High School and College'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Difference between High School and College'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Lab 4'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Testing whether N is Prime'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Testing whether N is Prime'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Writing Snap! in English (e.g., for Exam)'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Writing Snap! in English (e.g., for Exam)'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='The Project'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Mechanics'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Current Status'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Choosing a Topic'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Example Topic'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Writing Process'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Collect'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Collect: Example'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Collect: Sources'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='Plan'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='Plan: Example'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='Develop'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='Develop: Example Paper'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Develop: Example Software'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='Develop: Example Software'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='Wrapping Up Chapter 2'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='Software Is Eating Our Lunch'>
+         27
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
