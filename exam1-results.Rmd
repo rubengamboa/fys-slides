@@ -76,7 +76,7 @@ title('Final Exam Results')
 
 ## Grade Distribution by Question
 
-```{r exam3_questions, fig.width=10, fig.height=8, echo=FALSE, cache=FALSE}
+```{r exam1_questions, fig.width=10, fig.height=8, echo=FALSE, cache=FALSE}
 g2 <- data.frame(question = c(rep('q1a',   length(g$q1a)),
                               rep('q1b',   length(g$q1b)),
                               rep('q2',    length(g$q2)),

@@ -62,4 +62,4 @@ bonus      |      5 | Make your own block
 
 ## Grade Distribution by Question
 
-![plot of chunk exam3_questions](assets/fig/exam3_questions-1.png) 
+![plot of chunk exam1_questions](assets/fig/exam1_questions-1.png) 
