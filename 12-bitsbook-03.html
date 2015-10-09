@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>COSC 1101 The Beauty &amp; Joy of Computing</title>
+  <meta charset="utf-8">
+  <meta name="description" content="COSC 1101 The Beauty &amp; Joy of Computing">
+  <meta name="author" content="Ruben Gamboa">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>COSC 1101 The Beauty &amp; Joy of Computing</h1>
+    <h2>Blown to Bits. Ghosts in the Machine</h2>
+    <p>Ruben Gamboa<br/>Professor</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    <style>
+slide.title-slide {
+     background-color: #EDE0CF; /* CBE7A5; #EDE0CF; ; #CA9F9D*/
+     background-image: url(assets/img/uw-logo-large.png);
+     background-repeat: no-repeat;
+     background-position: center top;
+   }
+slide:not(.title-slide) {
+    background-image: url(assets/img/uw-logo-small.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 24px;
+}
+</style>
+
+<h1>File Formats</h1>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Text Files</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Simplest files there are</p></li>
+<li><p>Easiest to share between systems (e.g., Mac/Windows/Linux/Supercomputers)</p>
+
+<ul>
+<li>Even then, there are problems (e.g., CR vs. CRLF)</li>
+</ul></li>
+<li><p>Key question is how to represent each character</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Text Files: Character Encoding</h2>
+  </hgroup>
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th>Character</th>
+<th>EBCDIC</th>
+<th>ASCII</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>A</td>
+<td>11000001</td>
+<td>01000001</td>
+</tr>
+<tr>
+<td>B</td>
+<td>11000010</td>
+<td>01000010</td>
+</tr>
+<tr>
+<td>I</td>
+<td>11001001</td>
+<td>01001001</td>
+</tr>
+<tr>
+<td>J</td>
+<td>11010001</td>
+<td>01001010</td>
+</tr>
+<tr>
+<td>a</td>
+<td>10000001</td>
+<td>01100001</td>
+</tr>
+<tr>
+<td>b</td>
+<td>10000010</td>
+<td>01100010</td>
+</tr>
+<tr>
+<td>0</td>
+<td>11110000</td>
+<td>00110000</td>
+</tr>
+<tr>
+<td>1</td>
+<td>11110001</td>
+<td>00110001</td>
+</tr>
+<tr>
+<td>,</td>
+<td>01101011</td>
+<td>00101100</td>
+</tr>
+</tbody></table>
+
+<p>EBCDIC: , a b A B 0 1</p>
+
+<p>ASCII: , 0 1 A B a b</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Text Files: Other Languages</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Whoops!  We forgot other languages</p></li>
+<li><p>We need to address the characters, like &#223;, &#233;, &#228;, &#230;, and &#231;</p></li>
+<li><p>There are also complications with orderings</p>
+
+<ul>
+<li>Different dialects of the same language can have different orderings!</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Music Files</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Important question: What do you want to do with music?</p></li>
+<li><p>Some possible answers are</p>
+
+<ul>
+<li>I want help composing</li>
+<li>I want the computer to play something I&#39;ve written</li>
+<li>I want the computer to play a recording of my playing the piano (maybe to scare innocent children)</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Music Files: Sheet Music</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>We can encode sheet music in a number of ways</li>
+</ul>
+
+<ol>
+<li>A <strong>header</strong> stores the time signature and key</li>
+<li>The header is followed by one or more measures</li>
+<li>Each measure has one or more voices</li>
+<li>Each voice has a sequence of notes and durations (which must add up to the time signature)</li>
+</ol>
+
+<ul>
+<li>Notice that each note is encoded just like a character in text</li>
+<li><p>Also notice that there are bound to be complications:</p>
+
+<ul>
+<li>Dynamical markings</li>
+<li>Key changes</li>
+<li>Time signature changes (thank you, Mr. Bart&#243;k)</li>
+</ul></li>
+<li><p>Examples: MusicXML for composing, and MIDI for playback</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Music Files: Recordings</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Or we can store recorded music</p></li>
+<li><p>Here we need to think about how music is played in the real (not virtual) world</p>
+
+<ul>
+<li>The speaker moves back and forth to push air, making sound waves</li>
+<li>How often the speaker moves determines the frequency or note</li>
+<li>How far the speaker moves determines the amplitude or volume</li>
+</ul></li>
+<li><p>So we can simply encode music in one of these two ways:</p>
+
+<ul>
+<li>For each time unit, store the displacement of the speaker (takes into account amplitude and frequency)</li>
+<li>For each period, store the frequency, amplitude, and duration of the period</li>
+</ul></li>
+<li><p>The second option requires less space (e.g., C# at volume 11 for 1 second, as opposed to 11,025 entries detailing the amplitudes, sampled at 11,025 Hz)</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Music Files: Compression</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Earliest music formats were uncompressed, e.g., WAV format (which uses approach #1, so it takes up a lot of space)</li>
+<li><p>Newer formats are compressed, e.g., MP3</p></li>
+<li><p>There are many approaches to compression, and we&#39;ll talk more about this later</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Image Files</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>To store images, we have to consider light intensities over a 2D grid (of pixels)</p></li>
+<li><p>Easiest way to think of it is as a gray scale, say from 0 to 255</p>
+
+<ul>
+<li>Exactly what 0 or 255 or (especially) 128 means is a hard topic</li>
+<li>Humans perceive color (and sound) logarithmically, not linearly</li>
+<li>That means that doubling the intensity simply moves it up a notch, not twice as much</li>
+<li>Similar example: doubling the frequency raises the pitch by one scale</li>
+</ul></li>
+<li><p>This can be generalized to arbitrary colors by having separate intensities for Red, Green, and Blue</p>
+
+<ul>
+<li>Sort of mimics the way the eye perceives color, but not quite</li>
+</ul></li>
+<li><p>But it means that each pixel is represented by three colors, each from 0 to 255</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Image Files: Size</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>The simplest approach is to store all colors for all pixels</li>
+<li>The display I&#39;m using has 2560 rows of 1440 pixels each, for a total of 3.6864 &times; 10<sup>6</sup> pixels
+
+<ul>
+<li>That corresponds to a 3.6 megapixel camera -- my phone camera has better resolution!</li>
+</ul></li>
+<li>At three bytes each, that means each picture needs 1.10592 &times; 10<sup>7</sup> bytes, or around 11Mbytes.</li>
+<li>My 32Gbyte thumb drive could only store 3106 images!</li>
+<li>For a sense of scale, my computer has roughly 16,000 family photos</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Image Files: Compression</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>One way to compress images is to take advantage of <em>spatial coherence</em></li>
+<li>That just means that if one pixel is green, the pixels next to it are probably green, too</li>
+<li>So we do not need to use three bytes to encode each pixel</li>
+<li><p>We only need to encode the (much smaller) differences between pixels</p></li>
+<li><p>E.g., instead of 100, 101, 101, 101, 102, 101, ... we can store 100, +1, +0, +0, +1, -1, ...</p></li>
+<li><p>We can also use &quot;general&quot; compression techniques, which follow a similar idea, but may look at the entire file first</p></li>
+<li><p>Key distinction:</p>
+
+<ul>
+<li><strong>Lossless</strong> compression completely replicates the original image</li>
+<li><strong>Lossy</strong> compression replicates a very similar image (e.g., it may return 101 for a color instead of 102 -- could you tell the difference, anyway?)</li>
+</ul></li>
+<li><p>Examples: RAW and TIFF are uncompressed, GIF and PNG have lossless compression, and JPEG has lossy compression</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Video Files</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Two main challenges</p>
+
+<ul>
+<li>A video consists of lots of still images, roughly 30 images per second of video</li>
+<li>A video also has an audio track</li>
+</ul></li>
+<li><p>For the first challenge, consider a YouTube video uploaded at (the recommended) 1920x1080 resolution</p></li>
+<li><p>That&#39;s 2.0736 &times; 10<sup>6</sup> pixels, which at 3 bytes each turns into 6.2208 &times; 10<sup>6</sup> bytes per image</p></li>
+<li><p>Which means 1.86624 &times; 10<sup>8</sup> bytes per second -- yeah, that&#39;s 186 Mbytes per second!</p></li>
+<li><p>30-minute TV episode: 3.359232 &times; 10<sup>11</sup> bytes</p></li>
+<li><p>2-hour movie: 1.3436928 &times; 10<sup>12</sup> bytes</p></li>
+<li><p>Lord of the Rings Trilogy: 6.2369741 &times; 10<sup>12</sup> bytes</p></li>
+<li><p>Note: \(10^{12}\) bytes is a <strong>terabyte</strong></p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Video Files: Compression</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>The same discussion about image file compression applies</p></li>
+<li><p>Video supports one more trick: <strong>temporal coherence</strong></p></li>
+<li><p>The idea is that if a particular pixel is blue in frame #1394, then it&#39;s probably also blue in the next frame!</p></li>
+<li><p>So we can take differences not just between pixels in one frame, but between corresponding pixels in adjacent frames</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Video Files: Compression Sanity Check</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>By the way, a DVD stores about 5Gbytes, compared with 3Tbytes for a 2-hour movie</p></li>
+<li><p>We would need to compress the movie by a ratio of 600:1 to make it fit into a DVD</p>
+
+<ul>
+<li>That&#39;s not happening!</li>
+</ul></li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+<li><p>The problem is that we&#39;re using &quot;high-definition&quot; video</p></li>
+<li><p>DVDs can handle video up to 720x480 pixels, which corresponds to old TV resolution</p></li>
+<li><p>Blue Ray disks, on the other hand, store up to 50Gbytes (and with some tricks, 128Gbytes)</p></li>
+<li><p>That means we need compressions on the order of 60:1, which is still very high</p></li>
+<li><p>A quick experiment yields a compression ratio of 64:1 for Apple QuickTime -- so we&#39;re good, barely!</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='NA'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Text Files'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Text Files: Character Encoding'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Text Files: Other Languages'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Music Files'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Music Files: Sheet Music'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Music Files: Recordings'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Music Files: Compression'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Image Files'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Image Files: Size'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Image Files: Compression'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Video Files'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Video Files: Compression'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Video Files: Compression Sanity Check'>
+         14
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

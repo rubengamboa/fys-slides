@@ -36,6 +36,7 @@ widgets:      [mathjax, bootstrap]
 * [Lab 3](07-lab-03.html)
 * [Lab 4](10-lab-04.html)
 * [Project Information](11-project-01.html)
+* [Lab 5](13-lab-05.html)
 
 *** =right
 
@@ -46,6 +47,7 @@ widgets:      [mathjax, bootstrap]
 * [Ch 2. Naked in the Sunlight](06-bitsbook-02.html)
 * [Ch 2. Naked in the Sunlight (Continued)](08-bitsbook-02.html)
 * [Ch 2. Naked in the Sunlight (Continued)](09-bitsbook-02.html)
+* [Ch 3. Ghosts in the Machine](12-bitsbook-03.html)
 
 
 
