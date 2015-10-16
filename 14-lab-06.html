@@ -34,7 +34,7 @@
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
     <h1>COSC 1101 The Beauty &amp; Joy of Computing</h1>
-    <h2></h2>
+    <h2>Lab 6. More List Processing</h2>
     <p>Ruben Gamboa<br/>Professor</p>
   </hgroup>
   <article></article>  
@@ -45,44 +45,91 @@
     <slide class="" id="slide-1" style="background:;">
   <article data-timings="">
     <style>
-.title-slide {
+slide.title-slide {
      background-color: #EDE0CF; /* CBE7A5; #EDE0CF; ; #CA9F9D*/
      background-image: url(assets/img/uw-logo-large.png);
      background-repeat: no-repeat;
      background-position: center top;
    }
+slide:not(.title-slide) {
+    background-image: url(assets/img/uw-logo-small.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 24px;
+}
 </style>
 
-<h2>The Beauty and Joy of Computing</h2>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-<div style='float:left;width:48%;' class='centered'>
-  <h3>Computing</h3>
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Why You Should Use Script Variables</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>We wrote SUM last time using the (global) variable I to look at each element of the array</p></li>
+<li><p>We also wrote SQUARE last time using the (global) variable I to look at each element of the array</p></li>
+<li><p>What happens if you try</p>
 
-<ul>
-<li><a href="01-introduction.html">Course Introduction</a></li>
-<li><a href="03-lab-01.html">Lab 1</a></li>
-<li><a href="05-lab-02.html">Lab 2</a></li>
-<li><a href="07-lab-03.html">Lab 3</a></li>
-<li><a href="10-lab-04.html">Lab 4</a></li>
-<li><a href="11-project-01.html">Project Information</a></li>
-<li><a href="13-lab-05.html">Lab 5</a></li>
-<li><a href="14-lab-06.html">Lab 6</a></li>
+<pre><code>SUM of SQUARE of _L_
+</code></pre></li>
+<li><p>Maybe it works, maybe it doesn&#39;t</p></li>
+<li><p>Don&#39;t leave it up to chance!</p></li>
 </ul>
 
-</div>
-<div style='float:right;width:48%;'>
-  <h3>Blown to Bits</h3>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-<ul>
-<li><a href="02-bitsbook-01.html">Ch 1. Digital Explosion</a></li>
-<li><a href="04-grit.html">Ch 1. Digital Explosion (Continued)</a></li>
-<li><a href="06-bitsbook-02.html">Ch 2. Naked in the Sunlight</a></li>
-<li><a href="08-bitsbook-02.html">Ch 2. Naked in the Sunlight (Continued)</a></li>
-<li><a href="09-bitsbook-02.html">Ch 2. Naked in the Sunlight (Continued)</a></li>
-<li><a href="12-bitsbook-03.html">Ch 3. Ghosts in the Machine</a></li>
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Why You Should Use Script Variables, Part 2</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Suppose we have a list of lists of numbers (like a matrix)</p>
+
+<pre><code>[ [ 1 2 3]
+  [ 4 5 6] ]
+</code></pre></li>
+<li><p>We want the sum of all the elements of all lists</p>
+
+<pre><code>set _I_ to 1
+set _total_ to 0
+repeat until _I_ &gt; length _Matrix_
+    set _total_ to _total_ + SUM of (item _I_ of _Matrix_)
+report _total_
+</code></pre></li>
+<li><p>Moral: From now on, use <strong>script variable</strong> instead of <strong>Make a variable</strong> inside blocks (aka scripts)</p></li>
 </ul>
 
-</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Lab Exercises</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Create a new variable called <strong>shared document</strong>
+
+<ul>
+<li>Set <strong>shared document</strong> to a list of 8 numbers between 1 and 100</li>
+</ul></li>
+<li>Create a new variable called <strong>original message</strong>
+
+<ul>
+<li>Set <strong>original message</strong> to a random list of 8 numbers between 1 and 10</li>
+</ul></li>
+<li>Create a block called <strong>render <em>image</em></strong> that draws a line with the colors in the image (which is a list of numbers)</li>
+<li>Create a block called <strong>hide <em>message</em> in <em>document</em></strong> that adjusts the <em>document</em> by the 0 or 1 in <em>message</em></li>
+<li>Create a block called <strong>recover <em>message</em> in <em>document</em></strong> that gets back the hidden message</li>
+</ul>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -95,6 +142,24 @@
       <a href="#" target="_self" rel='tooltip' 
         data-slide=1 title='NA'>
          1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Why You Should Use Script Variables'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Why You Should Use Script Variables, Part 2'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Lab Exercises'>
+         4
       </a>
     </li>
   </ul>
