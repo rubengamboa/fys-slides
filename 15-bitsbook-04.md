@@ -34,6 +34,116 @@ slide:not(.title-slide) {
 }
 </style>
 
+# Staying on Course
+
+---&twocol
+
+## Bell Curves for Success
+
+*** =left
+
+![plot of chunk bell-1](assets/fig/bell-1-1.png) 
+
+*** =right
+
+![plot of chunk bell-2](assets/fig/bell-2-1.png) 
+
+---&twocol
+
+## Keys to Success
+
+*** =left
+
+### Winner Takes All
+
+* Total, unrelenting commitment
+
+* Talent required but insufficient
+
+*** =right
+
+### All Take Some
+
+* Sticktoitiveness
+
+* Don't give up
+
+* Not at first sign of trouble
+
+* Or at second sign of trouble
+
+* Not even at the tenth sign of trouble!!!
+
+
+---&twocol
+
+## Helpful Images
+
+*** =left
+
+<div class="centered">
+    <img src="assets/img/yes-we-can.jpg" title="Yes we can" alt="Yes we can">
+</div>
+
+*** =right
+
+<div></div>
+
+---&twocol
+
+## Helpful Images
+
+*** =left
+
+<div class="centered">
+    <img src="assets/img/yes-we-can.jpg" title="Yes we can" alt="Yes we can">
+</div>
+
+*** =right
+
+<div class="centered">
+    <img src="assets/img/yes-i-can.jpg" title="Yes I can" alt="Yes I can">
+</div>
+
+---&twocol
+
+## Helpful Images
+
+*** =left
+
+<div class="centered">
+    <img src="assets/img/churchill-never-give-up.jpg" title="Never give up" alt="Never give up">
+</div>
+
+
+*** =right
+
+<div class="centered">
+    <img src="assets/img/churchill-success-failure.jpg" title="Success failure" alt="Success failure">
+</div>
+
+---
+
+## Helpful Images
+
+<div class="centered">
+    <img src="assets/img/trapdoor.jpg" title="Trapdoor" alt="Trapdoor">
+</div>
+
+---
+
+## Helpful Images
+
+<div class="centered">
+    <img src="assets/img/messi-overnight-success.jpg" title="Overnight Success" alt="Overnight Success">
+</div>
+
+---
+
+# Search Engines
+
+---
+
 ## Taxonomies to Search Engines
 
 * The "directory" metaphor
