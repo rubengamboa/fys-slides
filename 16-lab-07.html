@@ -34,7 +34,7 @@
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
     <h1>COSC 1101 The Beauty &amp; Joy of Computing</h1>
-    <h2>Lab 5. Basic List Processing</h2>
+    <h2>Lab 7. Recursion</h2>
     <p>Ruben Gamboa<br/>Professor</p>
   </hgroup>
   <article></article>  
@@ -59,28 +59,12 @@ slide:not(.title-slide) {
 }
 </style>
 
-<h2>Lists</h2>
+<h2>Idea of Recursion</h2>
 
 <ul>
-<li>A <strong>list</strong> lets you store zero or more items in a variable</li>
-<li><p>Examples:</p>
-
-<ul>
-<li>[2, 3, 5, 7, 11, 13, 17, 19]</li>
-<li>[Ruben, Gamboa, W3850128, 100000000]</li>
-<li>[four, score, and, seven, years, ago, ...]</li>
-<li>[ [Calculus I, 4, A], [English Composition, 3, B], [Physics I, 4, B] ]</li>
-</ul></li>
-<li><p>You can build and process lists with the blocks</p>
-
-<ul>
-<li>Variables &gt; list</li>
-<li>Variables &gt; length of L</li>
-<li>Variables &gt; item X of L</li>
-<li>Variables &gt; replace item X of L with Y</li>
-<li>Variables &gt; insert Y at X of L</li>
-<li class=''>. . .</li>
-</ul></li>
+<li>Recursion is almost heretical</li>
+<li>The idea is to define a block using that very same block</li>
+<li>This sounds like circular definitions!</li>
 </ul>
 
   </article>
@@ -89,29 +73,25 @@ slide:not(.title-slide) {
 
 <slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Using Lists</h2>
+    <h2>Why Recursion Is Not Circular</h2>
   </hgroup>
   <article data-timings="">
     <ul>
-<li><p>Store different data related to one entity</p>
-
-<ul>
-<li>[Ruben, Gamboa, W3850128, 100000000]</li>
-</ul></li>
-<li><p>Define your own blocks to provide <strong>abstraction</strong></p>
-
-<ul>
-<li>Employee with <em>First Name</em>, <em>Last Name</em>, <em>W-number</em>, and <em>Salary</em></li>
-<li>First Name of <em>Employee</em></li>
-<li>Last Name of <em>Employee</em></li>
-<li>W-number of <em>Employee</em></li>
-<li>Salary of <em>Employee</em></li>
-<li>Change First Name of <em>Employee</em> to <em>New First Name</em></li>
-<li>Change Last Name of <em>Employee</em> to <em>New Last Name</em></li>
-<li>Change W-number of <em>Employee</em> to <em>New W-number</em></li>
-<li>Change Salary of <em>Employee</em> to <em>New Salary</em></li>
-</ul></li>
+<li>Consider these block definitions</li>
 </ul>
+
+<div class="centered">
+    <img src="assets/img/bad-recursion-1.png" title="Bad Recursion" alt="Bad Recursion">
+    <img src="assets/img/bad-recursion-2.png" title="Bad Recursion" alt="Bad Recursion">
+</div>
+
+<ul>
+<li>And compare to this one</li>
+</ul>
+
+<div class="centered">
+    <img src="assets/img/good-recursion-1.png" title="Good Recursion" alt="Good Recursion">
+</div>
 
   </article>
   <!-- Presenter Notes -->
@@ -119,27 +99,21 @@ slide:not(.title-slide) {
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Using Lists</h2>
+    <h2>What&#39;s the Difference?</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li><p>Store zero or more of the same king of thing</p>
+    <div class="centered">
+    <img src="assets/img/bad-recursion-2.png" title="Bad Recursion" alt="Bad Recursion">
+    <img src="assets/img/good-recursion-1.png" title="Good Recursion" alt="Good Recursion">
+</div>
 
 <ul>
-<li>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</li>
-<li>[2, 3, 5, 7, 11, 13, 17, 19]</li>
-<li>[Ruben, Gamboa, W3850128, 100000000]</li>
-<li>[four, score, and, seven, years, ago, ...]</li>
-<li>[ [Calculus I, 4, A], [English Composition, 3, B], [Physics I, 4, B] ]</li>
-</ul></li>
-<li><p>To process this, we may want to</p>
-
-<ul>
-<li>Go through all the elements to summarize some value</li>
-<li>Go through all the elements of the list to find something we want</li>
-<li>Transform all elements of a list</li>
-<li>Filter the elements of the list</li>
-</ul></li>
+<li>Good recursion defines a block of X, as supposed to just a block</li>
+<li>Block of X can use Block of Y</li>
+<li>Block of Y can use Block of Z</li>
+<li>And so on</li>
+<li>As long as Block of X doesn&#39;t use Block of X directly or indirectly, there are no circular definitions</li>
+<li>And we know this is OK because <strong>X gets smaller every time</strong></li>
 </ul>
 
   </article>
@@ -148,25 +122,23 @@ slide:not(.title-slide) {
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Using Lists: Summarizing a Value</h2>
+    <h2>What&#39;s the Difference? (Advanced)</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code>      set SUM to 0
-      set I to 1
-      repeat until I &gt; length of L
-          set SUM to SUM + item I of L
-          set I to I+1
-      report SUM
+    <div class="centered">
+    <img src="assets/img/good-recursion-1.png" title="Good Recursion" alt="Good Recursion">
+    <img src="assets/img/bad-recursion-3.png" title="Bad Recursion" alt="Bad Recursion">
+</div>
 
+<ul>
+<li><p>The value of X is still getting smaller</p></li>
+<li><p>But it doesn&#39;t work</p>
 
-      set MAX to 0
-      set I to 1
-      repeat until I &gt; length of L
-          if item I of L &gt; MAX
-              set MAX to item I of L
-          set I to I+1
-      report MAX
-</code></pre>
+<ul>
+<li>Hint: What happens when X is -1?</li>
+<li>And what if X is 1?</li>
+</ul></li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -174,16 +146,23 @@ slide:not(.title-slide) {
 
 <slide class="" id="slide-5" style="background:;">
   <hgroup>
-    <h2>Using Lists: Finding an Element</h2>
+    <h2>Recursion and Loops</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code>      set I to 1
-      repeat until I &gt; length of L
-          if item I of L is the one I want
-              report item I of L
-          set I to I+1
-      report error
-</code></pre>
+    <ul>
+<li><p>Recursion and loops can be used interchangeably </p>
+
+<ul>
+<li>Some people find loops easier to understand</li>
+<li>Others find recursion easier</li>
+</ul></li>
+<li><p>In some situations, recursion can be significantly easier</p>
+
+<ul>
+<li>We&#39;ll see the big example of that next week</li>
+</ul></li>
+<li><p>For now, we&#39;ll revisit the programs using loops to use recursion instead</p></li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -191,16 +170,21 @@ slide:not(.title-slide) {
 
 <slide class="" id="slide-6" style="background:;">
   <hgroup>
-    <h2>Using Lists: Transforming all Elements of a List</h2>
+    <h2>Example 1: Process all numbers from 1 to N</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code>      set I to 1
-      NewList = list
-      repeat until I &gt; length of L
-          insert 2 * item I of L at I of NewList
-          set I to I+1
-      report NewList
+    <pre><code>    sum up to N
+        if N &lt; 1
+            report 0
+        else
+            report N + (sum up to N-1)
 </code></pre>
+
+<ul>
+<li>Important: Do NOT try to figure <code>(sum up to N-1)</code> here!</li>
+<li>Instead, simply assume that this sum is computed correctly, and use it here in the right way</li>
+<li>One of my colleagues calls this <strong>faith-based programming</strong></li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -208,16 +192,24 @@ slide:not(.title-slide) {
 
 <slide class="" id="slide-7" style="background:;">
   <hgroup>
-    <h2>Using Lists: Filtering a List</h2>
+    <h2>Example 2: Summarizing a list</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code>      I = 1
-      NewList = list
-      repeat until I &gt; length of L
-          if item I of L is one of the ones I want
-              insert item I of L at last of NewList
-          set I to I+1
-      report NewList
+    <pre><code>    sum elements of L
+        if length of L = 0
+            report 0
+        else
+            report (item 1 of L) + (sum elements of (all but first of L))
+
+
+    minimum element of L
+        if length of L = 1
+            report item 1 of L
+        else
+            if (item 1 of L) &lt; (minimum element of (all but first of L))
+                report (item 1 of L)
+            else
+                report (minimum element of (all but first of L))
 </code></pre>
 
   </article>
@@ -226,23 +218,18 @@ slide:not(.title-slide) {
 
 <slide class="" id="slide-8" style="background:;">
   <hgroup>
-    <h2>Part 1</h2>
+    <h2>Example 3: Finding an element in a list</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li>Build the following blocks, which use lists to represent a course in your schedule, e.g., [Calculus I, 4, A]
-for the Calculus I course, with 4 credit hours, in which you got a A
-
-<ul>
-<li>Course <em>Course Name</em> with <em>Credits</em> credits and a grade of <em>Grade</em></li>
-<li>Course Name of <em>Course</em></li>
-<li>Credits of <em>Course</em></li>
-<li>Grade of <em>Course</em></li>
-<li>Change Course Name of <em>Course</em> to <em>New Course Name</em></li>
-<li>Change Credits of <em>Course</em> to <em>New Credits</em></li>
-<li>Change Grade of <em>Course</em> to <em>New Course</em></li>
-</ul></li>
-</ul>
+    <pre><code>    find first even element of L
+        if length of L = 0
+            report error
+        else
+            if (item 1 of L) is even
+                report item 1 of L
+            else
+                report (find first even element of (all but first of L))
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
@@ -250,19 +237,15 @@ for the Calculus I course, with 4 credit hours, in which you got a A
 
 <slide class="" id="slide-9" style="background:;">
   <hgroup>
-    <h2>Part 2</h2>
+    <h2>Example 4: Transforming all elements of a list</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li>Build these blocks
-
-<ul>
-<li><strong>Product</strong> of all elements in list L</li>
-<li><strong>Smallest</strong> element of list L</li>
-<li><strong>Square</strong> each element of list L</li>
-<li>List of all elements of L that are <strong>Prime</strong></li>
-</ul></li>
-</ul>
+    <pre><code>    double L
+        if length of L = 0
+            report L
+        else
+            report (2 * (item 1 of L)) in front of (double (all but first of L))
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
@@ -270,11 +253,58 @@ for the Calculus I course, with 4 credit hours, in which you got a A
 
 <slide class="" id="slide-10" style="background:;">
   <hgroup>
-    <h2>Part 3</h2>
+    <h2>Using Lists: Filtering a list</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>    even elements of L
+        if length of L = 0
+            report L
+        else
+            if (item 1 of L) is even
+                report (item 1 of L) in front of (even elements of (all but first of L))
+            else
+                report (even elements of (all but first of L))
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Part 1</h2>
   </hgroup>
   <article data-timings="">
     <ul>
-<li><p>Built a block called &quot;GPA of <em>courses</em>&quot; that will go through a list of courses and compute your GPA</p>
+<li>Build these blocks using recursion
+
+<ul>
+<li><strong>Product</strong> of all elements in list L</li>
+<li><strong>Smallest</strong> element of list L</li>
+<li><strong>Square</strong> each element of list L</li>
+<li>List of all elements of L that are <strong>Prime</strong></li>
+<li>Or at least, all elements that are <strong>odd</strong></li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Part 2</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Start with your solution to Lab 5, specifically Part 1 of that lab, which creates</p>
+
+<ul>
+<li>Course <em>name</em> with <em>credits</em> credits and a grade of <em>grade</em></li>
+<li>Name of <em>course</em></li>
+<li class=''>. . .</li>
+</ul></li>
+<li><p>Using recursion, build a block called &quot;GPA of <em>courses</em>&quot; that will go through a list of courses and compute your GPA</p>
 
 <pre><code>set Courses to list Course &quot;Calculus I&quot; with 4 credits and a grade of A,
                     Course &quot;English Composition&quot; with 3 credits and a grade of B,
@@ -300,56 +330,68 @@ say GPA of Courses for 2 secs
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Using Lists'>
+        data-slide=2 title='Why Recursion Is Not Circular'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Using Lists'>
+        data-slide=3 title='What&#39;s the Difference?'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Using Lists: Summarizing a Value'>
+        data-slide=4 title='What&#39;s the Difference? (Advanced)'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Using Lists: Finding an Element'>
+        data-slide=5 title='Recursion and Loops'>
          5
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='Using Lists: Transforming all Elements of a List'>
+        data-slide=6 title='Example 1: Process all numbers from 1 to N'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Using Lists: Filtering a List'>
+        data-slide=7 title='Example 2: Summarizing a list'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Part 1'>
+        data-slide=8 title='Example 3: Finding an element in a list'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='Part 2'>
+        data-slide=9 title='Example 4: Transforming all elements of a list'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='Part 3'>
+        data-slide=10 title='Using Lists: Filtering a list'>
          10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Part 1'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Part 2'>
+         12
       </a>
     </li>
   </ul>
