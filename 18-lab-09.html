@@ -34,7 +34,7 @@
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
     <h1>COSC 1101 The Beauty &amp; Joy of Computing</h1>
-    <h2></h2>
+    <h2>Lab 9. Recursive Turtles</h2>
     <p>Ruben Gamboa<br/>Professor</p>
   </hgroup>
   <article></article>  
@@ -45,48 +45,92 @@
     <slide class="" id="slide-1" style="background:;">
   <article data-timings="">
     <style>
-.title-slide {
+slide.title-slide {
      background-color: #EDE0CF; /* CBE7A5; #EDE0CF; ; #CA9F9D*/
      background-image: url(assets/img/uw-logo-large.png);
      background-repeat: no-repeat;
      background-position: center top;
    }
+slide:not(.title-slide) {
+    background-image: url(assets/img/uw-logo-small.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 24px;
+}
 </style>
 
-<h2>The Beauty and Joy of Computing</h2>
-
-<div style='float:left;width:48%;' class='centered'>
-  <h3>Computing</h3>
+<h2>Recursive Reporters and Recursive Commands</h2>
 
 <ul>
-<li><a href="01-introduction.html">Course Introduction</a></li>
-<li><a href="03-lab-01.html">Lab 1</a></li>
-<li><a href="05-lab-02.html">Lab 2</a></li>
-<li><a href="07-lab-03.html">Lab 3</a></li>
-<li><a href="10-lab-04.html">Lab 4</a></li>
-<li><a href="11-project-01.html">Project Information</a></li>
-<li><a href="13-lab-05.html">Lab 5</a></li>
-<li><a href="14-lab-06.html">Lab 6</a></li>
-<li><a href="16-lab-07.html">Lab 7</a></li>
-<li><a href="17-lab-08.html">Lab 8</a></li>
-<li><a href="18-lab-09.html">Lab 9</a></li>
+<li>So far, we&#39;ve focused on <strong>Recursive Reporters</strong></li>
+<li>These blocks use recursion to find a value, e.g., the minimum of a list</li>
 </ul>
 
-</div>
-<div style='float:right;width:48%;'>
-  <h3>Blown to Bits</h3>
+<p><br>
+<br></p>
 
 <ul>
-<li><a href="02-bitsbook-01.html">Ch 1. Digital Explosion</a></li>
-<li><a href="04-grit.html">Ch 1. Digital Explosion (Continued)</a></li>
-<li><a href="06-bitsbook-02.html">Ch 2. Naked in the Sunlight</a></li>
-<li><a href="08-bitsbook-02.html">Ch 2. Naked in the Sunlight (Continued)</a></li>
-<li><a href="09-bitsbook-02.html">Ch 2. Naked in the Sunlight (Continued)</a></li>
-<li><a href="12-bitsbook-03.html">Ch 3. Ghosts in the Machine</a></li>
-<li><a href="15-bitsbook-04.html">Ch 4. Needles in the Haystack</a></li>
+<li>Today, we&#39;ll look at <strong>Recursive Commands</strong></li>
+<li>I.e., we&#39;ll move the turtle using recursion</li>
 </ul>
 
-</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>The Secret</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Writing recursive commands that move the turtle can be very tricky</li>
+<li>The secret is to be very clear about
+
+<ul>
+<li>Where the turtle is supposed to end</li>
+<li>What direction the turtle should be pointing at when it ends</li>
+</ul></li>
+<li>If you keep that straight, even the mistakes will be fun!</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Demos</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Triangles</li>
+<li>More Triangles</li>
+<li>Snowflake</li>
+<li>Tree</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Lab</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Build a tree!</li>
+<li>This can be just like the one in the demos</li>
+<li>But be creative
+
+<ul>
+<li>More branches?</li>
+<li>Variety?</li>
+<li>Can it look like a real tree, e.g., a spruce?</li>
+</ul></li>
+</ul>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -99,6 +143,24 @@
       <a href="#" target="_self" rel='tooltip' 
         data-slide=1 title='NA'>
          1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='The Secret'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Demos'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Lab'>
+         4
       </a>
     </li>
   </ul>
