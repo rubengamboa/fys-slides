@@ -69,7 +69,7 @@ summary(g$grades)
 g$lgrades <- ifelse (g$grades<60, 'F', ifelse (g$grades<70, 'D', ifelse (g$grades<80, 'C', ifelse (g$grades<90, 'B', 'A'))))
 g$lgrades <- factor(g$lgrades, c('F', 'D', 'C', 'B', 'A'))
 barplot(table(g$lgrades))
-title('Final Exam Results')
+title('Exam #1 Results')
 ```
 
 ---

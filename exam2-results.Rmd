@@ -1,0 +1,113 @@
+---
+
+title:        COSC 1101 The Beauty & Joy of Computing
+subtitle:     Exam #2 Results
+author:       Ruben Gamboa
+date:         November 20, 2015
+#logo:         uw-logo-small.png
+#biglogo:      uw-logo-large.png
+job:          Professor
+highlighter:  highlight.js
+hitheme:      tomorrow             # default
+mode:         selfcontained        # {standalone, draft}
+framework:    io2012               # {io2012, html5slides, shower, dzslides, revealjs, ...}
+widgets:      [mathjax, bootstrap] # {mathjax, quiz, bootstrap}
+
+---
+
+<style>
+slide.title-slide {
+     background-color: #EDE0CF; /* CBE7A5; #EDE0CF; ; #CA9F9D*/
+     background-image: url(assets/img/uw-logo-large.png);
+     background-repeat: no-repeat;
+     background-position: center top;
+   }
+slide:not(.title-slide) {
+    background-image: url(assets/img/uw-logo-small.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 24px;
+}
+</style>
+
+## Exam Questions
+
+Question   | Points | Topic
+-----------|--------|-----------------------------------
+q1a        |      5 | Metadata
+q1b        |      5 | Metadata example
+q1c        |      5 | Metadata security challenge
+q2a        |      5 | Image file format
+q2b        |     10 | Steganography in images
+q3         |      5 | Search engine impartiality
+q4         |      5 | Search engine raking
+q5         |      5 | Search engine business model
+q6a        |      5 | Cryptography, public and private keys
+q6b        |      5 | Cryptography: encrypting a message
+q6c        |      5 | **Bonus** Cryptography: signing a message
+q7         |     15 | Balancing encryption
+q8         |     15 | Programming count Ds
+q9         |     15 | Programming reverse
+
+
+----
+
+## Grade Distribution
+
+```{r exam2_grades, echo=FALSE, cache=FALSE}
+points <- c(5, 5, 5, 5, 10, 5, 5, 5, 5, 5, 5, 15, 15, 15)
+g <- data.frame(q1a   = points[1]  - c(4,  5, 0, 0, 0, 4, 0, 1, 0, 0,  2,  4, 0, 4, 0,  0,  4,  4,  0, 4, 0, 5, 0,  0),
+                q1b   = points[2]  - c(3,  5, 0, 0, 0, 4, 0, 0, 0, 0,  0,  3, 0, 1, 0,  2,  4,  3,  0, 0, 0, 5, 0,  0),
+                q1c   = points[3]  - c(3,  5, 0, 0, 0, 4, 3, 0, 1, 0,  0,  3, 0, 0, 0,  0,  4,  3,  3, 0, 0, 5, 0,  0),
+                q2a   = points[4]  - c(2,  0, 0, 2, 1, 3, 3, 0, 0, 0,  4,  0, 0, 1, 1,  4,  4,  0,  3, 0, 0, 2, 4,  0),
+                q2b   = points[5]  - c(0,  0, 2, 0, 0, 0, 3, 0, 0, 0,  1,  0, 0, 0, 0,  2,  0,  0,  4, 0, 0, 7, 3,  2),
+                                                                                                    
+                q3    = points[6]  - c(1,  0, 0, 0, 0, 4, 0, 0, 0, 0,  1,  0, 0, 2, 0,  1,  0,  0,  0, 0, 0, 0, 0,  2),
+                q4    = points[7]  - c(0,  0, 0, 0, 0, 0, 3, 0, 0, 0,  0,  0, 0, 0, 0,  2,  0,  0,  1, 0, 0, 0, 0,  0),
+                q5    = points[8]  - c(0,  2, 0, 0, 0, 0, 2, 0, 0, 0,  0,  0, 0, 0, 0,  0,  0,  1,  0, 0, 0, 0, 4,  2),
+                                                                                                    
+                q6a   = points[9]  - c(3,  3, 0, 0, 4, 0, 1, 2, 3, 3,  4,  3, 3, 0, 0,  3,  2,  3,  3, 2, 0, 3, 1,  0),
+                q6b   = points[10] - c(3,  0, 3, 2, 3, 4, 2, 2, 2, 2,  4,  3, 3, 2, 1,  3,  3,  5,  2, 1, 3, 4, 3,  1),
+                q6c   =              c(1,  5, 1, 3, 2, 2, 1, 2, 0, 5,  1,  2, 2, 2, 3,  1,  1,  0,  2, 1, 1, 0, 3,  4),
+                                                                                                    
+                q7    = points[12] - c(0,  2, 0, 1, 1, 0, 0, 0, 0, 0,  3,  2, 0, 0, 0,  0,  0,  0,  0, 0, 2, 2, 0,  3),
+                                                                                                    
+                q8    = points[13] - c(2, 10, 0, 5, 0, 2, 1, 3, 8, 0, 12,  0, 0, 0, 2, 10,  8,  1,  5, 1, 1, 0, 0,  0),
+                                                                                                    
+                q9    = points[14] - c(3,  7, 3, 0, 7, 5, 0, 2, 1, 0, 12, 10, 1, 0, 5, 12, 10, 15, 10, 4, 4, 7, 1,  1))
+g$grades <- rowSums(g)
+summary(g$grades)
+
+g$lgrades <- ifelse (g$grades<60, 'F', ifelse (g$grades<70, 'D', ifelse (g$grades<80, 'C', ifelse (g$grades<90, 'B', 'A'))))
+g$lgrades <- factor(g$lgrades, c('F', 'D', 'C', 'B', 'A'))
+barplot(table(g$lgrades))
+title('Exam #2 Results')
+```
+
+---
+
+## Grade Distribution by Question
+
+```{r exam2_questions, fig.width=10, fig.height=8, echo=FALSE, cache=FALSE}
+g2 <- data.frame(question = c(rep('q1a',   length(g$q1a)),
+                              rep('q1b',   length(g$q1b)),
+                              rep('q1c',   length(g$q1c)),
+                              rep('q2a',   length(g$q2a)),
+                              rep('q2b',   length(g$q2b)),
+                              rep('q3',    length(g$q3)),
+                              rep('q4',    length(g$q4)),
+                              rep('q5',    length(g$q5)),
+                              rep('q6a',   length(g$q6a)),
+                              rep('q6b',   length(g$q6b)),
+                              rep('q6c',   length(g$q6c)),
+                              rep('q7',    length(g$q7)),
+                              rep('q8',    length(g$q8)),
+                              rep('q9',    length(g$q9))),
+                 score = 100*c(g$q1a/points[1], g$q1b/points[2], g$q1c/points[3], 
+                               g$q2a/points[4], g$q2b/points[5], 
+                               g$q3/points[6], g$q4/points[7], g$q5/points[8],
+                               g$q6a/points[9], g$q6b/points[10], g$q6c/points[11], 
+                               g$q7/points[12], g$q8/points[13], g$q9/points[14]))
+plot(g2$question, g2$score, ylim=c(0,100))
+title('Individual Question Results')
+```
