@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>COSC 1101 The Beauty &amp; Joy of Computing</title>
+  <meta charset="utf-8">
+  <meta name="description" content="COSC 1101 The Beauty &amp; Joy of Computing">
+  <meta name="author" content="Ruben Gamboa">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>COSC 1101 The Beauty &amp; Joy of Computing</h1>
+    <h2>Lab 10. Machine Learning</h2>
+    <p>Ruben Gamboa<br/>Professor</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    <style>
+slide.title-slide {
+     background-color: #EDE0CF; /* CBE7A5; #EDE0CF; ; #CA9F9D*/
+     background-image: url(assets/img/uw-logo-large.png);
+     background-repeat: no-repeat;
+     background-position: center top;
+   }
+slide:not(.title-slide) {
+    background-image: url(assets/img/uw-logo-small.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 24px;
+}
+</style>
+
+<h2>Machine Learning</h2>
+
+<ul>
+<li><strong>Machine learning</strong> sounds deeply mysterious</li>
+<li>Do you know how <strong>you</strong> learn?</li>
+<li>Do you know how <strong>anybody</strong> learns?</li>
+</ul>
+
+<p><br>
+<br></p>
+
+<ul>
+<li>How can we teach computers to learn????</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Machine Learning Demystified</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Let&#39;s define <strong>machine learning</strong> to mean <strong>the machine gets better at something</strong></li>
+<li>So learning is about <strong>improving performance</strong> of some task</li>
+</ul>
+
+<p><br>
+<br></p>
+
+<ul>
+<li>Better yet, learning is about <strong>optimizing performance</strong></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Sample Problem</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Suppose we have a bunch of data points, each with an <strong>x</strong> and a <strong>y</strong> coordinate</p>
+
+<ul>
+<li>x = length of phone call, y = location of phone</li>
+<li>x = size of lump, y = location of lump</li>
+<li>x = high school GPA, y = ACT composite store</li>
+<li>x = number of times &#39;easy&#39; appears in message, y = number of times &#39;money&#39; appears</li>
+</ul></li>
+<li><p>Each data point is also classified as either &quot;green&quot; or &quot;red&quot;</p>
+
+<ul>
+<li>green = terrorist, red = just fine</li>
+<li>green = cancer, red = not cancer</li>
+<li>green = will graduate, red = will drop out</li>
+<li>green = spam, red = ham</li>
+</ul></li>
+<li><p>The goal is to <strong>automatically figure out</strong> the classification from the values of <strong>x</strong> and <strong>y</strong></p></li>
+<li><p>And we want the computer to get better and better at this</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Sample Problem</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Let&#39;s make some assumptions that make it easier to classify points based on <strong>x</strong> and <strong>y</strong> coordinates</li>
+</ul>
+
+<ol>
+<li>Classes are <strong>linearly separable</strong>, i.e., the 1s are on the right side of some line, and the 2s are on the other</li>
+<li>The line passes <strong>through the origin</strong></li>
+</ol>
+
+<ul>
+<li>With these assumptions, all we have to do is find the right angle (or slope, if you prefer) for the line</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Sample Classification</h2>
+  </hgroup>
+  <article data-timings="">
+    <div class="centered">
+    <img src="assets/img/machine-learning-example.png" title="Machine Learning Example" alt="Machine Learning Example">
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Finding the Optimal Line</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Let&#39;s use <strong>brute force</strong>!</p></li>
+<li><p>Start with angle 1, they try angle 2, ..., up to angle 360</p></li>
+<li><p>For each angle, figure out how many errors it makes</p>
+
+<ul>
+<li>I.e., the line will classify a point as &quot;green&quot; or &quot;red&quot; depending on whether it&#39;s to the right or left of the line</li>
+<li>We also know from the data points whether it <strong>should be</strong> &quot;green&quot; or &quot;red&quot;</li>
+<li>So the number of errors is the number of points that are classified incorrectly</li>
+</ul></li>
+<li><p>The angle we pick is the angle that results in the smallest number of errors</p></li>
+<li><p>Ties are broken arbitrarily</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Nasty Detail</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>How do you know if a point is to the right or the left of the line with angle \(\theta\)????</p></li>
+<li><p>This takes some work</p></li>
+<li><p>The equation of the line is \(y = \tan(\theta)x\)</p></li>
+<li><p>We can avoid the nasty case of \(\theta = 90\) by breaking this up as \(y = \frac{\sin(\theta)}{\cos(\theta)} x\)</p></li>
+<li><p>That means that \(\cos(\theta) y - \sin(\theta)x = 0\)</p></li>
+<li><p>Now, if the point is to the <strong>right</strong> of the line, we have</p>
+
+<ul>
+<li>\(\cos(\theta) y - \sin(\theta)x < 0\)</li>
+</ul></li>
+<li><p>Now, if the point is to the <strong>left</strong> of the line, we have</p>
+
+<ul>
+<li>\(\cos(\theta) y - \sin(\theta)x > 0\)</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Machine Learning</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>That&#39;s it!</p></li>
+<li><p>If you do &quot;brute force&quot; as described above your code will <strong>learn</strong> the best value of \(\theta\)</p></li>
+<li><p>I.e., it will find the line that best classifies the data points into green or red</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>The Lab</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Demo time!</li>
+</ul>
+
+<ol>
+<li>Import the blocks from <a href="./learning-blocks.xml" title="Learning Blocks">the starter code</a></li>
+<li>Run the block called <strong>Generate Sample Data</strong> and store the results in a variable</li>
+<li>Write a block called <strong>Learn Boundary from <em>Data</em></strong> that will do the brute force approach mentioned above</li>
+<li>Evaluate your answer using the block called <strong>Draw <em>Data</em> with Boundary at <em>Boundary</em></strong></li>
+</ol>
+
+<ul>
+<li>Hints:
+
+<ul>
+<li>Edit the <strong>Generate Sample Data</strong> block</li>
+<li>Change the number of data points to 10 (to speed up learning)</li>
+<li>Disable the automated error generation, e.g., by checking for <strong>=0</strong> instead of <strong>=1</strong></li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Machine Learning in Real Life</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Instead of doing brute force, we guess the &quot;next&quot; value of \(\theta\) using <strong>magic</strong> (actually, calculus)</p>
+
+<ul>
+<li>This is <strong>much faster</strong>!!!</li>
+<li>Basic math for machine learning: Linear Algebra and Calculus III</li>
+</ul></li>
+<li><p>Lines do not have to pass through the origin</p></li>
+<li><p>We can break ties in better ways (e.g., right down the middle of the different classes)</p></li>
+</ul>
+
+<div class="centered">
+    <img src="assets/img/machine-learning-svm-1.png" title="Machine Learning Example" alt="Machine Learning Example">
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <img src="assets/img/machine-learning-svm-2.png" title="Machine Learning Example" alt="Machine Learning Example">
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Machine Learning in Real Life</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>It doesn&#39;t have to be a straight line!</li>
+</ul>
+
+<div class="centered">
+    <img src="assets/img/machine-learning-curve.png" title="Machine Learning Example" alt="Machine Learning Example">
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Machine Learning in Real Life</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>We can have more dimensions than just <strong>x</strong> and <strong>y</strong></p></li>
+<li><p>E.g., we can classify images based on their pixel values</p></li>
+<li><p>So a 1000x1000 image would have 1,000,000 dimensions!</p></li>
+</ul>
+
+<div class="centered">
+    <img src="assets/img/machine-learning-digits-1.png" title="Machine Learning Example" alt="Machine Learning Example">
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <img src="assets/img/machine-learning-digits-2.png" title="Machine Learning Example" alt="Machine Learning Example">
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='NA'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Machine Learning Demystified'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Sample Problem'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Sample Problem'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Sample Classification'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Finding the Optimal Line'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Nasty Detail'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Machine Learning'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='The Lab'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Machine Learning in Real Life'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Machine Learning in Real Life'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Machine Learning in Real Life'>
+         12
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
