@@ -3,7 +3,7 @@
 title:        COSC 1101 The Beauty & Joy of Computing
 subtitle:     Course Introduction
 author:       Ruben Gamboa
-date:         August 31, 2015
+date:         August 29, 2016
 #logo:         uw-logo-large.png
 #biglogo:      uw-logo-large.png
 job:          Professor
@@ -47,33 +47,30 @@ slide:not(.title-slide) {
 
 ## First-Year Seminars (FYS)
 
-> * Transition from high school to college life
+* Transition from high school to college life
 
-> * Improve retention
+* Improve retention
 
-> * Practice practicing a *life of the mind*
+* Practice practicing a *life of the mind*
 
 ---
 
-## Freshman Interest Groups (FIG)
+## First-Year Seminars (FYS) Common Outcomes
 
-> * Meet new friends
-
-> * Support each other through the first semester
-
-> * Study together
-
-> * Build community
+* Access diverse information through focused research, active discussion, and collaboration with peers.
+* Separate facts from inferences and relevant from irrelevant information, and explain the limitations of information.
+* Evaluate the credibility, accuracy, and reliability of conclusions drawn from information.
+* Recognize and synthesize multiple perspectives to develop innovative viewpoints.
+* Analyze one's own and others' assumptions and evaluate the relevance of contexts when presenting a position.
+* Communicate ideas in writing using appropriate documentation.
 
 ---
 
 ## Who We Are
 
-> * Ruben Gamboa
+* Ruben Gamboa
 
-> * Christopher Nickell
-
---- &twocol
+--- &twocol 
 
 ## Who You Are
 
@@ -113,6 +110,12 @@ And upload a useful photo, not one of these:
 
 ---
 
+## Who You Are
+
+* Rollcall & Introductions
+
+---
+
 # Course Overview
 
 We will learn how to program
@@ -124,7 +127,6 @@ We will learn how to program
 <br>
 
 More important, we will learn how programming affects our lives
-
 
 ---
 
@@ -157,7 +159,7 @@ Exams (3)                | 10% each  |   50% combined
 
 * Very, very important that you read ahead of class
 
-* May involve both Piazza and in-class discussions
+* Assessed via in-class discussions and "journal" entries
 
 * Reading schedule in syllabus
 
@@ -167,11 +169,11 @@ Exams (3)                | 10% each  |   50% combined
 
 ## Programming Assignments
 
-* Fridays, we will meet in EN 4059
+* Fridays, we will meet in CR 225
 
 * That's the day we will work on programming during class
 
-* You may complete your assignments then or outside of class
+* You should complete your assignments then but you can also wrap programs up outside of class
 
 * You may also visit me during my office hours for help
 
@@ -179,13 +181,11 @@ Exams (3)                | 10% each  |   50% combined
 
 ## School Activities
 
-* Sporting event (*)
+* Sporting event
 * Musical event
 * Performing arts event
-* Professional society meeting (*)
+* Professional society meeting
 * Technical presentation
-
-Items marked with (*) are taken care of by your FIG RA's planned activities
 
 ---
 
@@ -222,7 +222,7 @@ Items marked with (*) are taken care of by your FIG RA's planned activities
 
 # Basic Policies
 
-* Come to class
+* Come prepared to class
 
 * Do not use cellphones, tablets, computers, etc. during class
 
@@ -233,6 +233,20 @@ Items marked with (*) are taken care of by your FIG RA's planned activities
 * Follow the honor code:
 
   > Do not lie, cheat or steal or tolerate those who do.
+
+---
+
+## Class Discussion
+
+### First-Year Seminars (FYS) Common Outcomes
+
+* Access diverse information through focused research, active discussion, and collaboration with peers.
+* Separate facts from inferences and relevant from irrelevant information, and explain the limitations of information.
+* Evaluate the credibility, accuracy, and reliability of conclusions drawn from information.
+* Recognize and synthesize multiple perspectives to develop innovative viewpoints.
+* Analyze one's own and others' assumptions and evaluate the relevance of contexts when presenting a position.
+* Communicate ideas in writing using appropriate documentation.
+
 
 
 

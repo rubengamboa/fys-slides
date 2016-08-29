@@ -2,7 +2,7 @@
 
 title:        COSC 1101 The Beauty & Joy of Computing
 author:       Ruben Gamboa
-date:         Fall 2015
+date:         Fall 2016
 #logo:         uw-logo-large.png
 #biglogo:      uw-logo-large.png
 job:          Professor
@@ -31,6 +31,8 @@ widgets:      [mathjax, bootstrap]
 ### Computing
 
 * [Course Introduction](01-introduction.html)
+
+<!--
 * [Lab 1](03-lab-01.html)
 * [Lab 2](05-lab-02.html)
 * [Lab 3](07-lab-03.html)
@@ -41,11 +43,13 @@ widgets:      [mathjax, bootstrap]
 * [Lab 7](16-lab-07.html)
 * [Lab 8](17-lab-08.html)
 * [Lab 9](18-lab-09.html)
+-->
 
 *** =right
 
 ### Blown to Bits
 
+<!--
 * [Ch 1. Digital Explosion](02-bitsbook-01.html)
 * [Ch 1. Digital Explosion (Continued)](04-grit.html)
 * [Ch 2. Naked in the Sunlight](06-bitsbook-02.html)
@@ -53,6 +57,6 @@ widgets:      [mathjax, bootstrap]
 * [Ch 2. Naked in the Sunlight (Continued)](09-bitsbook-02.html)
 * [Ch 3. Ghosts in the Machine](12-bitsbook-03.html)
 * [Ch 4. Needles in the Haystack](15-bitsbook-04.html)
-
+-->
 
 
