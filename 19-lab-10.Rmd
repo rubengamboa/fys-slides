@@ -101,7 +101,7 @@ slide:not(.title-slide) {
 
 * Let's use **brute force**!
 
-* Start with angle 1, they try angle 2, ..., up to angle 360
+* Start with angle 1&deg;, they try angle 2&deg;, ..., up to angle 360&deg;
 
 * For each angle, figure out how many errors it makes
   * I.e., the line will classify a point as "green" or "red" depending on whether it's to the right or left of the line
